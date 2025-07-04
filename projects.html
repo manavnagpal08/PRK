@@ -3,55 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Kaaysha Rao</title>
+  <title>Projects | Manav Nagpal</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">Kaaysha Rao</div>
+    <div class="logo">Manav Nagpal</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <div class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="skills.html">Skills</a>
       <a href="projects.html">Projects</a>
-      <a href="certificates.html">Certifications</a>
       <a href="contact.html">Contact</a>
       <div class="toggle-dark" onclick="toggleDarkMode()">🌙</div>
     </div>
   </nav>
 
-  <section class="section" id="projects" data-aos="fade-up">
-    <h2 class="gradient-text">Capstone & Hackathon Projects</h2>
+  <!-- Projects Section -->
+  <section class="section" data-aos="fade-up">
+    <h2>My Projects</h2>
+    <div class="project-grid">
 
-    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-      <h3>📊 Altair Contest – Data Comparison Software</h3>
-      <p>Built a dynamic tool with Kaggle + MongoDB + Altair for interactive data insights.</p>
-    </div>
+      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Flip & Clip</h3>
+        <p>A data-driven platform for secure content sharing and real-time crime detection using AI & Python.</p>
+        <span class="tag">Python</span>
+        <span class="tag">Data Science</span>
+        <span class="tag">Security</span>
+      </div>
 
-    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-      <h3>📱 Meta Contest – Clear Crowd App</h3>
-      <p>Live crowd density app using user input and real-time data, optimized for public spaces.</p>
-    </div>
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Kraze</h3>
+        <p>A creative social platform that allows users to post, engage, and discover digital art and ideas.</p>
+        <span class="tag">UI/UX</span>
+        <span class="tag">Frontend</span>
+        <span class="tag">Python</span>
+      </div>
 
-    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-      <h3>🤖 Accenture Hackathon – AI Content Platform</h3>
-      <p>Personalized recommendation system for news & entertainment using machine learning.</p>
+      <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Hotel Management System</h3>
+        <p>A complete hotel software to handle room bookings, check-ins, check-outs and billing with SQL + Python.</p>
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Desktop App</span>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+        <h3>Disaster Analytics (Social Media)</h3>
+        <p>ML model to analyze live tweets during disasters to assist emergency response teams with actionable insights.</p>
+        <span class="tag">ML</span>
+        <span class="tag">NLP</span>
+        <span class="tag">Python</span>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+        <h3>Blooms App</h3>
+        <p>A machine learning-powered mobile app that detects plant diseases by analyzing leaf images using Python models and Android frontend.</p>
+        <span class="tag">Python</span>
+        <span class="tag">Java</span>
+        <span class="tag">ML</span>
+        <span class="tag">Android Studio</span>
+      </div>
+
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="wave-container">
-      <svg class="waves" viewBox="0 0 1440 320">
-        <path fill="#00d9ff" fill-opacity="0.2" d="M0,96L60,122.7...Z" />
-      </svg>
-    </div>
-    <div class="footer-content">
-      <p>© 2025 Kaaysha Rao | <a href="mailto:kaaysha.rao@gmail.com">kaaysha.rao@gmail.com</a></p>
-    </div>
-  </footer>
-
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
