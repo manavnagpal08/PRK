@@ -1,53 +1,67 @@
-// Initialize AOS animations
-AOS.init();
+// Animate On Scroll Init
+AOS.init({
+  duration: 1200,
+  once: true
+});
 
-// Mobile menu toggle
+// Toggle hamburger menu (mobile)
 function toggleMenu() {
   const nav = document.getElementById('navLinks');
   nav.classList.toggle('open');
 }
 
-// Dark mode toggle
+// Dark Mode toggle
 function toggleDarkMode() {
-  document.body.classList.toggle('dark');
+  document.body.classList.toggle('dark-mode');
+  localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
 }
 
-// Typing animation
-const typedText = document.getElementById('typed-text');
-const messages = [
-  "Turning ideas into impact 💡",
-  "Exploring AI & Data Science 🚀",
-  "Designing creative digital solutions 🎨"
-];
+// Load saved theme on page load
+window.onload = function () {
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+  }
 
-let msgIndex = 0;
-let charIndex = 0;
+  // Start typing animation after load
+  startTypingAnimation();
+};
 
-function type() {
-  if (!typedText) return;
+// Typing Text Effect
+function startTypingAnimation() {
+  const phrases = [
+    "Turning Ideas into Impact 🚀",
+    "Building for the future with AI 💻",
+    "Exploring Innovation ✨"
+  ];
+  const el = document.getElementById("typed-text");
+  let i = 0, j = 0;
+  let isDeleting = false;
 
-  if (charIndex < messages[msgIndex].length) {
-    typedText.textContent += messages[msgIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, 70);
+  function type() {
+    const current = phrases[i];
+    if (!isDeleting) {
+      el.textContent = current.substring(0, j++);
+    } else {
+      el.textContent = current.substring(0, j--);
+    }
+
+    if (j === current.length + 1) isDeleting = true;
+    if (j === 0) {
+      isDeleting = false;
+      i = (i + 1) % phrases.length;
+    }
+
+    setTimeout(type, isDeleting ? 50 : 100);
+  }
+
+  if (el) type();
+}
+
+// Show/hide back-to-top button
+window.onscroll = () => {
+  if (window.scrollY > 200) {
+    document.body.classList.add('scrolled');
   } else {
-    setTimeout(erase, 1500);
+    document.body.classList.remove('scrolled');
   }
-}
-
-function erase() {
-  if (charIndex > 0) {
-    typedText.textContent = messages[msgIndex].substring(0, charIndex - 1);
-    charIndex--;
-    setTimeout(erase, 40);
-  } else {
-    msgIndex = (msgIndex + 1) % messages.length;
-    setTimeout(type, 500);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  if (typedText) {
-    type();
-  }
-});
+};
