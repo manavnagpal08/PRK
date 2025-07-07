@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skills | Kaaysha Rao</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
@@ -20,29 +20,55 @@
       <a href="projects.html">Projects</a>
       <a href="certificates.html">Certifications</a>
       <a href="contact.html">Contact</a>
-      <div class="toggle-dark" onclick="toggleDarkMode()">🌙</div>
+      <span onclick="setTheme('lavender')">💜</span>
+      <span onclick="setTheme('hacker')">💻</span>
     </div>
   </nav>
 
   <!-- Skills Section -->
   <section class="section" data-aos="fade-up">
-    <h2 class="gradient-text">🧠 Technical Skills</h2>
+    <h2>My Skills</h2>
+    <div class="skill-bar">
+      <span>Python</span>
+      <div class="bar"><div class="fill" style="width: 92%">92%</div></div>
+
+      <span>Machine Learning</span>
+      <div class="bar"><div class="fill" style="width: 88%">88%</div></div>
+
+      <span>Web Development</span>
+      <div class="bar"><div class="fill" style="width: 85%">85%</div></div>
+
+      <span>SQL & Databases</span>
+      <div class="bar"><div class="fill" style="width: 80%">80%</div></div>
+
+      <span>Deep Learning</span>
+      <div class="bar"><div class="fill" style="width: 75%">75%</div></div>
+    </div>
+  </section>
+
+  <!-- Technologies & Frameworks Section -->
+  <section class="section" data-aos="fade-up" data-aos-delay="150">
+    <h2 class="gradient-text">🛠️ Technologies & Frameworks</h2>
     <ul class="skills-grid">
-      <li>Python (NumPy, Pandas, scikit-learn)</li>
-      <li>SQL</li>
-      <li>PHP</li>
-      <li>Java</li>
-      <li>Linux</li>
-      <li>Android Studio</li>
-      <li>Jupyter Notebook</li>
-      <li>Machine Learning</li>
-      <li>Deep Learning</li>
-      <li>Frontend & Backend Development</li>
+      <li>🌐 HTML5</li>
+      <li>🎨 CSS3</li>
+      <li>⚙️ JavaScript</li>
+      <li>🛢️ SQL</li>
+      <li>🐘 PHP</li>
+      <li>☕ Java</li>
+      <li>🐍 Python</li>
+      <li>🐧 Linux</li>
+      <li>🔗 Git / GitHub</li>
+      <li>📊 scikit-learn</li>
+      <li>🔣 NumPy / Pandas</li>
+      <li>📓 Jupyter Notebook</li>
+      <li>🧠 TensorFlow</li>
+      <li>📱 Android Studio</li>
     </ul>
   </section>
 
   <!-- Soft Skills -->
-  <section class="section" data-aos="fade-up" data-aos-delay="100">
+  <section class="section" data-aos="fade-up" data-aos-delay="200">
     <h2 class="gradient-text">🌼 Soft Skills</h2>
     <ul class="skills-grid">
       <li>Leadership</li>
@@ -57,10 +83,17 @@
     </ul>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer Section -->
   <footer class="footer">
-    <p>“Design with empathy. Build with purpose.”</p>
-    <p>© 2025 Kaaysha Rao | <a href="mailto:kaaysha.rao@gmail.com">kaaysha.rao@gmail.com</a></p>
+    <div class="wave-container">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ff66c4" fill-opacity="0.2" d="M0,96L60,122.7C120,149,240,203,360,197.3C480,192,600,128,720,96C840,64,960,64,1080,101.3C1200,139,1320,213,1380,250.7L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+      </svg>
+    </div>
+    <div class="footer-content">
+      <p>“Design with empathy. Build with purpose.”</p>
+      <p>© 2025 Kaaysha Rao | <a href="mailto:kaaysha.rao@gmail.com">kaaysha.rao@gmail.com</a></p>
+    </div>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
